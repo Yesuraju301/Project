@@ -1,0 +1,26 @@
+
+<div class="container">
+
+    <h1>Compare Table</h1>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Title</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let obj of childTable; let i = index">
+            <th scope="row">{{obj.id}}</th>
+            
+            <td>{{obj.title}}</td>
+            <td> <img [src]="obj.thumbnailUrl"> </td>
+            <td> <button class="btn btn-primary" (click)="remove(i)"> remove</button></td>
+          </tr>
+    
+        </tbody>
+      </table>
+
+</div>
