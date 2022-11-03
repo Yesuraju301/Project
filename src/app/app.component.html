@@ -3,16 +3,16 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">First</th>
         <th scope="col">Title</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Image</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let obj of userInfo; let i = index">
         <th >{{obj.id}}</th>
         
-        <td>{{obj.title}}</td>
+        <td>{{obj.Image}}</td>
         <td> <img [src]="obj.thumbnailUrl"> </td>
         <td> <button class="btn btn-primary" (click)="compare(i)"> Compare</button></td>
       </tr>
